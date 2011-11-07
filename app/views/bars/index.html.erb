@@ -1,0 +1,31 @@
+<h3>Bars</h3>
+<hr>
+<table class="neighborhood">
+  <tr>
+    <th>Neighborhood</th>
+    <th>Bar name</th>
+    <th>Bar description</th>
+    <th>Address</th>
+    <th>Zip</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bars.each do |bar| %>
+  <tr>
+    <td><%= bar.neighborhood.name %></td>	
+    <td><%= bar.bar_name %></td>
+    <td><%= bar.bar_description %></td>
+    <td><%= bar.address %></td>
+    <td><%= bar.zip %></td>
+    <td><%= link_to 'Show', bar %></td>
+    <td><%= link_to 'Edit', edit_bar_path(bar) %></td>
+    <td><%= link_to 'Destroy', bar, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Bar', new_bar_path %>

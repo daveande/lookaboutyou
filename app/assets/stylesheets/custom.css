@@ -1,0 +1,120 @@
+.container {
+  margin: 1em auto;
+  width: 960px;
+}
+
+body {
+  background: #F4F5ED;
+}
+
+header {
+  padding: 20px;
+  background: #C7C9BE;
+  color: #DC4E00;
+  font-size: 120%;
+}
+
+header img {
+  padding: 1em;
+  background: #fff;
+}
+
+section {
+  margin-top: 1em;
+  font-size: 100%;
+  padding: 20px;
+  background: #fff;
+}
+
+section h1 {
+  font-size: 200%;
+}
+
+/* Links */
+
+a {
+  color: #069;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #069;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #069;
+}
+
+/* Navigation */
+
+nav {
+  float: right;
+  background-color: #C7C9BE;
+  padding: 0 0.7em;
+  white-space: nowrap;
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+/* Table styling */
+
+table.neighborhood {
+	border-width: 5px;
+	border-spacing: 5px;
+	border-style: solid;
+	border-color: #C7C9BE;
+	border-collapse: separate;
+	background-color: white;
+}
+table.neighborhood th {
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: gray;
+	background-color: #DC4E00;
+	color: white;
+	text-align: left;
+	-moz-border-radius: ;
+}
+table.neighborhood td {
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: gray;
+	background-color: #F4F5ED;
+	-moz-border-radius: ;
+}
+
+/* form field styling */
+ 
+div.field, div.actions {
+  margin-bottom: 15px;
+}
+
+/* User show page */
+
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+td.sidebar {
+  width: 30%;
+  padding: 2em;
+  vertical-align: top;
+  background: #C7C9BE;
+  color: #069;
+}
+
+td.main {
+  width: 70%;
+  vertical-align: top;
+  padding: 1em;
+}

@@ -1,0 +1,34 @@
+<%= form_for(@learn) do |f| %>
+  <% if @learn.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@learn.errors.count, "error") %> prohibited this learn from being saved:</h2>
+
+      <ul>
+      <% @learn.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label "Learn, See, Do" %><br />
+    <%= f.text_field :learn_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :learn_description %>
+  </div>
+  <%= f.hidden_field :neighborhood_id %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

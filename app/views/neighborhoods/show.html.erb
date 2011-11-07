@@ -1,0 +1,35 @@
+<br><b>Neighborhood Name:</b>
+<b><%= @neighborhood.name %></b></br> <%= link_to 'Add a Learn, See, Do', new_learn_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Add a Bar', new_bar_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Add a Cafe', new_cafe_url(:neighborhood_id => @neighborhood.id) %>
+<hr>
+
+<table class="neighborhood">
+	
+  <tr>
+    <td><b>Description</b></td>
+    <td><%= @neighborhood.description %></td>
+  </tr>
+
+  <tr>
+    <td><b>Learn, See, Do</b></td>
+      <% @neighborhood.learns.each do |f| %>
+	    <td><li><%= link_to f.learn_name, learn_url(f.id) %></li></td>
+      <% end %>
+  </tr>
+
+  <tr>
+	<td><b>Bars</b></td>
+    <td><% @neighborhood.bars.each do |f| %>
+	  <li><%= link_to f.bar_name, bar_url(f.id) %></li>
+    <% end %></td>
+  </tr>
+
+  <tr>
+	<td><b>Cafes</b></td>
+    <% @neighborhood.cafes.each do |f| %>
+	  <td><li><%= link_to f.cafe_name, cafe_url(f.id) %></li></td>
+    <% end %>
+  </tr>
+</table>
+</br>
+<%= link_to "Edit Neighborhood", edit_neighborhood_url(@neighborhood.id) %> |
+<%= link_to "Delete Neighborhood", neighborhood_url(@neighborhood.id), :method => "delete", :confirm => "Are you sure you want to delete this neighborhood?" %>

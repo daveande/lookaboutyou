@@ -1,0 +1,27 @@
+<h3>Cafes</h3>
+<hr>
+
+<table class="neighborhood">
+  <tr>
+    <th>Neighborhood</th>	
+    <th>Cafe name</th>
+    <th>Cafe description</th>
+    <th>Address</th>
+    <th>Zip</th>
+  </tr>
+
+<% @cafes.each do |cafe| %>
+  <tr>
+    <td><%= cafe.neighborhood_id %></td>
+    <td><%= cafe.cafe_name %></td>
+    <td><%= cafe.cafe_description %></td>
+    <td><%= cafe.address %></td>
+    <td><%= cafe.zip %></td>
+    <td><%= link_to 'Show', cafe %></td>
+    <td><%= link_to 'Edit', edit_cafe_path(cafe) %></td>
+    <td><%= link_to 'Destroy', cafe, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

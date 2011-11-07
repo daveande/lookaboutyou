@@ -1,0 +1,21 @@
+<table class="profile" summary="Profile information">
+  <tr>
+    <td class="sidebar round">
+      <h3><%= @user.first_name %> <%= @user.last_name %></h3>
+      
+	  <li><strong>Location: </strong><%= link_to @user.neighborhood.name, neighborhood_url(@user.neighborhood_id) %></li>
+      <li><strong>Guides Completed: </strong></li>
+      <li><strong>Guides Created: </strong></li>
+ 
+    </td>
+    <td class="main">
+      <h3>Guides To Complete</h3>
+    </td>
+  </tr>
+</table>
+
+
+
+
+
+

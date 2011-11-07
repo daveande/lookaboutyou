@@ -1,0 +1,46 @@
+# This file should contain all the record creation needed to seed the database with its default values.
+# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
+#
+# Examples:
+#
+#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
+#   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Neighborhood.destroy_all
+
+Neighborhood.create(:name => "The Loop", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "River North", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "South Loop", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Lakeview", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Boystown", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Lincoln Park", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Old Town", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Hyde Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Bronzeville", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Bridgeport-Chinatown", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Chatham-South Shore", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Wicker Park", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Logan Square", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Greektown", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Pilsen", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Uptown", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Lincoln Square", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Rogers Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Little Village", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Garfield Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Humboldt Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Austin", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Back of the Yards", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Marquette Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Midway", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Avondale", :description => "This is a description of this neighborhood")
+Neighborhood.create(:name => "Irving Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Portage Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Jefferson Park", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "O'Hare", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Historic Pullman", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "East Side", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "South Chicago", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Hegewisch", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Beverly", :description => "This is a description of this neighborhood")
+#Neighborhood.create(:name => "Mount Greenwood", :description => "This is a description of this neighborhood")

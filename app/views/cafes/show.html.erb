@@ -1,0 +1,32 @@
+<p>
+  <b>Cafe name:</b>
+  <%= @cafe.cafe_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @cafe.address %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @cafe.zip %>
+</p>
+
+<p>
+  <b>Cafe description:</b>
+  <%= @cafe.cafe_description %>
+</p>
+
+<p>
+  <b>Neighborhood:</b>
+	<% if @cafe.neighborhood_id != 0 %>
+		<%= @cafe.neighborhood.name %>
+	<% else %>
+		This cafe does not have a neighborhood
+	<% end %>
+</p>
+
+
+<%= link_to 'Edit', edit_cafe_path(@cafe) %> |
+<%= link_to 'Back', caves_path %>

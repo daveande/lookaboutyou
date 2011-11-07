@@ -1,0 +1,27 @@
+<h3>Learn, See, or Do</h3>
+<hr>
+
+<table class="neighborhood">
+  <tr>
+    <th>Neighborhood</th>
+	<th>Learn name</th>
+    <th>Description</th>    
+    <th>Address</th>
+    <th>Zip</th>
+  </tr>
+
+<% @learns.each do |learn| %>
+  <tr>
+    <td><%= learn.neighborhood_id %></td>
+    <td><%= learn.learn_name %></td>
+    <td><%= learn.learn_description %></td>
+    <td><%= learn.address %></td>
+    <td><%= learn.zip %></td>
+    <td><%= link_to 'Show', learn %></td>
+    <td><%= link_to 'Edit', edit_learn_path(learn) %></td>
+    <td><%= link_to 'Destroy', learn, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

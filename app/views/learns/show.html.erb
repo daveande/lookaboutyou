@@ -1,0 +1,30 @@
+<p>
+  <b>Learn name:</b>
+  <%= @learn.learn_name %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @learn.address %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%= @learn.zip %>
+</p>
+
+<p>
+  <b>Learn description:</b>
+  <%= @learn.learn_description %>
+</p>
+
+<p>
+  <b>Neighborhood:</b>
+  <%= @learn.neighborhood.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_learn_path(@learn) %> |
+<%= link_to 'Back', learns_path %> | <%= link_to "Delete", learn_path(@learn), :confirm => "Are you sure?", method: :delete %>
+
+
