@@ -1,5 +1,5 @@
 <br><b>Neighborhood Name:</b>
-<b><%= @neighborhood.name %></b></br> <%= link_to 'Add a Learn, See, Do', new_learn_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Add a Bar', new_bar_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Add a Cafe', new_cafe_url(:neighborhood_id => @neighborhood.id) %>
+<b><%= @neighborhood.name %></b></br> <%= link_to 'Add a Learn, See, Do', new_learn_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Add a Bar', new_bar_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Add a Cafe', new_cafe_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Add a Learn, Bar, or Cafe', new_todo_url(:neighborhood_id => @neighborhood.id) %> | <%= link_to 'Create a 3, 2, 1 Guide', new_guide_url(:neighborhood_id => @neighborhood.id) %>
 <hr>
 
 <table class="neighborhood">
@@ -28,6 +28,14 @@
     <% @neighborhood.cafes.each do |f| %>
 	  <td><li><%= link_to f.cafe_name, cafe_url(f.id) %></li></td>
     <% end %>
+  </tr>
+
+  <tr>
+	<td><b>Neighborhood To Dos</b></td>
+    <td><% @neighborhood.todos.each do |f| %>
+	    <li><%= link_to f.name, todo_url(f.id) %></li>
+    <% end %>
+   </td>
   </tr>
 </table>
 </br>

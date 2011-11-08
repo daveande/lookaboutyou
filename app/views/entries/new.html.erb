@@ -1,0 +1,41 @@
+<h1><%= @guide.name %></h1>
+
+<%= form_tag(entries_url, :method => "post") do %>
+<table>
+  <tr>
+    <th>Add to Guide</th>
+    <th>Neighborhood</th>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Zip</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @todos.each do |todo| %>
+  <% if todo.neighborhood_id == @guide.neighborhood_id %>
+    <tr>
+      <td><%= check_box_tag(:todo_id) %></td>
+	  <td><%= todo.neighborhood.name %></td>	
+      <td><%= todo.todo_type %></td>
+      <td><%= todo.name %></td>
+      <td><%= todo.address %></td>
+      <td><%= todo.zip %></td>
+      <td><%= todo.description %></td>
+      <td><%= link_to 'Show', todo %></td>
+      <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+      <td><%= link_to 'Destroy', todo, confirm: 'Are you sure?', method: :delete %></td>
+    </tr>
+  <% end %>
+<% end %>
+</table>
+
+<%= hidden_field_tag(:guide_id) %>
+
+<%= submit_tag "Submit" %>
+
+<% end %>
+

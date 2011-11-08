@@ -1,0 +1,33 @@
+<h1>Listing todos</h1>
+
+<table>
+  <tr>
+    <th>Neighborhood</th>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Zip</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @todos.each do |todo| %>
+  <tr>
+    <td><%= todo.neighborhood.name %></td>	
+    <td><%= todo.todo_type %></td>
+    <td><%= todo.name %></td>
+    <td><%= todo.address %></td>
+    <td><%= todo.zip %></td>
+    <td><%= todo.description %></td>
+    <td><%= link_to 'Show', todo %></td>
+    <td><%= link_to 'Edit', edit_todo_path(todo) %></td>
+    <td><%= link_to 'Destroy', todo, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Todo', new_todo_path %>

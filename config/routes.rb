@@ -1,5 +1,11 @@
 Lookaboutyou::Application.routes.draw do
   
+  resources :entries
+  
+  resources :guides
+
+  resources :todos
+
   resources :sessions, :only => [:new, :create, :destroy]
 
   resources :users

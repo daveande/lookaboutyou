@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111104190700) do
+ActiveRecord::Schema.define(:version => 20111107215245) do
 
   create_table "bars", :force => true do |t|
     t.string   "bar_name"
@@ -33,6 +33,21 @@ ActiveRecord::Schema.define(:version => 20111104190700) do
     t.datetime "updated_at"
   end
 
+  create_table "entries", :force => true do |t|
+    t.integer  "guide_id"
+    t.integer  "todo_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "guides", :force => true do |t|
+    t.integer  "neighborhood_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "name"
+    t.text     "description"
+  end
+
   create_table "learns", :force => true do |t|
     t.string   "learn_name"
     t.string   "address"
@@ -46,6 +61,17 @@ ActiveRecord::Schema.define(:version => 20111104190700) do
   create_table "neighborhoods", :force => true do |t|
     t.string   "name"
     t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "todos", :force => true do |t|
+    t.string   "todo_type"
+    t.string   "name"
+    t.text     "description"
+    t.string   "address"
+    t.string   "zip"
+    t.integer  "neighborhood_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
