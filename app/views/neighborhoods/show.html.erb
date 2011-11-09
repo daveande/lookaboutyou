@@ -37,6 +37,15 @@
     <% end %>
    </td>
   </tr>
+
+  <tr>
+	<td><b>Created Guides</b></td>
+    <td><% @neighborhood.guides.each do |f| %>
+	    <li><%= link_to f.name, guide_url(f.id) %></li>
+    <% end %>
+   </td>
+  </tr>
+
 </table>
 </br>
 <%= link_to "Edit Neighborhood", edit_neighborhood_url(@neighborhood.id) %> |

@@ -1,8 +1,12 @@
 class NeighborhoodsController < ApplicationController
   # GET /neighborhoods
   # GET /neighborhoods.json
+  
+  before_filter :require_user, :only => :new
+  
   def index
     @neighborhoods = Neighborhood.order("name asc")
+    @guides = Guide.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -24,6 +28,7 @@ class NeighborhoodsController < ApplicationController
   # GET /neighborhoods/new
   # GET /neighborhoods/new.json
   def new
+    
     @neighborhood = Neighborhood.new
 
     respond_to do |format|

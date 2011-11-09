@@ -1,1 +1,28 @@
 <h1><%= @guide.name %></h1>
+<h3>Neighborhood: <%= @guide.neighborhood.name %></h3>
+<%= @guide.neighborhood.description %>
+
+<hr />
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Zip</th>
+    <th>Description</th>
+  </tr>
+
+<% @guide.todos.each do |todo| %>
+  <tr>
+    <td><%= todo.todo_type %></td>
+    <td><%= todo.name %></td>
+    <td><%= todo.address %></td>
+    <td><%= todo.zip %></td>
+    <td><%= todo.description %></td>
+  </tr>
+<% end %>
+</table>
+
+
+

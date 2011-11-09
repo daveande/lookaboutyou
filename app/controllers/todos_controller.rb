@@ -1,6 +1,9 @@
 class TodosController < ApplicationController
   # GET /todos
   # GET /todos.json
+  
+  before_filter :require_user
+  
   def index
     @todos = Todo.all
 

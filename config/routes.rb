@@ -1,8 +1,8 @@
 Lookaboutyou::Application.routes.draw do
   
-  resources :entries
-  
-  resources :guides
+  resources :guides do
+    resources :entries
+  end
 
   resources :todos
 

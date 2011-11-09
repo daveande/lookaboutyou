@@ -22,6 +22,31 @@
     <%= f.text_area :description %>
   </div>
 
+<h2>TODOS ARE HERE</h2>
+<table>
+  <tr>
+    <th>Add to Guide</th>
+    <th>Neighborhood</th>
+    <th>Type</th>
+    <th>Name</th>
+    <th>Address</th>
+    <th>Zip</th>
+    <th>Description</th>
+  </tr>
+
+<% @neighborhood.todos.each do |todo| %>
+   <tr>
+     <td><%= check_box_tag "todo_ids[]", todo.id %></td>
+  	 <td><%= todo.neighborhood.name %></td>	
+     <td><%= todo.todo_type %></td>
+     <td><%= todo.name %></td>
+     <td><%= todo.address %></td>
+     <td><%= todo.zip %></td>
+     <td><%= todo.description %></td>
+   </tr>
+<% end %>
+</table>
+
   <div class="actions">
     <%= f.submit %>
   </div>
