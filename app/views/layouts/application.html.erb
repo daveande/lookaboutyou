@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700' rel='stylesheet' type='text/css'>
   <title>LookAboutYou</title>
   <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
   <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
@@ -13,11 +14,11 @@
 		<header class="round">
 			Look About You
 			<nav class="round">
-			  <%= link_to "Neighborhoods", neighborhoods_url %> | 
+			  <%= link_to "Neighborhoods", neighborhoods_url, :style => "color:#fff" %> | 
 			  <% if session[:user_id].present? %>
-  			    <%= link_to "My Account", user_url(session[:user_id]) %> | <%= link_to "Sign Out", session_url(session[:user_id]), :method => "delete" %>
+  			    <%= link_to "My Account", user_url(session[:user_id]), :style => "color:#fff"  %> | <%= link_to "Sign Out", session_url(session[:user_id]), :method => "delete", :style => "color:#fff" %>
 			  <% else%>
-			    <%= link_to "Sign Up!", new_user_url %> | <%= link_to "Sign In", new_session_url %>	
+			    <%= link_to "Sign Up!", new_user_url, :style => "color:#fff"  %> | <%= link_to "Sign In", new_session_url, :style => "color:#fff"  %>	
 			  <% end %>
 			</nav>
 		</header>

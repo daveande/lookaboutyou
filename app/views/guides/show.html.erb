@@ -6,6 +6,7 @@
 
 <table>
   <tr>
+	<th>Point of Interest</th>
     <th>Type</th>
     <th>Name</th>
     <th>Address</th>
@@ -13,16 +14,22 @@
     <th>Description</th>
   </tr>
 
+<% x = 1 %>
+
 <% @guide.todos.each do |todo| %>
   <tr>
+	<td><%= x %></td>
     <td><%= todo.todo_type %></td>
     <td><%= todo.name %></td>
     <td><%= todo.address %></td>
     <td><%= todo.zip %></td>
     <td><%= todo.description %></td>
   </tr>
+  <% x += 1 %>
 <% end %>
 </table>
+
+<%= link_to "Delete Guide", guide_url(@guide), :method => :delete%>
 
 
 

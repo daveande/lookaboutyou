@@ -30,5 +30,12 @@ end
 def index
   @guide = Guide.all
 end
-  
+
+def destroy
+  @guide = Guide.find(params[:id])
+  @guide.destroy
+  flash[:notice] = "Your guide has been deleted."
+  redirect_to neighborhoods_url
+end
+
 end

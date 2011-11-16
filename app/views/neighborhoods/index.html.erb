@@ -13,15 +13,3 @@
 <% end %>
 </table>
 
-<table class="neighborhood">
-  <tr>
-    <th>Guides</th>
-  </tr>
-
-<% @guides.each do |guide| %>
-  <tr>
-    <td><%= link_to guide.name, guide_url(guide.id) %></td>
-  </tr>
-<% end %>
-</table>
-

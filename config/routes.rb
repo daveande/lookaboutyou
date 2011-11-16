@@ -9,14 +9,10 @@ Lookaboutyou::Application.routes.draw do
   resources :sessions, :only => [:new, :create, :destroy]
 
   resources :users
-  
-  resources :learns
-
-  resources :cafes
-
-  resources :bars
 
   resources :neighborhoods
+  
+  match "/home" => "pages#home"
   
   root :to => "neighborhoods#index"
 

@@ -4,20 +4,67 @@
 }
 
 body {
-  background: #F4F5ED;
+  background-image:url('background.png');
 }
 
 header {
   padding: 20px;
-  background: #C7C9BE;
-  color: #DC4E00;
+  background-image:url('header.gif');
+  color: #fff;
   font-size: 120%;
+  font-weight: bolder;
 }
 
 header img {
   padding: 1em;
   background: #fff;
 }
+
+#banner {
+	background: #069;
+	margin-bottom: 2em;
+	height: 180px;
+	padding: 20px;
+	color: #fff;
+}
+
+#three {
+	width: 250px;
+	height: 100px;
+	background: #C7C9BE;
+	color: #DC4E00;
+	text-align: center;
+	float: left;
+	-moz-border-radius:    10px;
+	-webkit-border-radius: 10px;
+	border-radius:         10px;
+}
+
+#two {
+	width: 250px;
+	height: 100px;
+	background: #C7C9BE;
+	margin-left: auto;
+	margin-right: auto;
+	color: #DC4E00;
+	text-align: center;
+	-moz-border-radius:    10px;
+ 	-webkit-border-radius: 10px;
+  	border-radius:         10px;
+}
+
+#one {
+	float: right;	
+	width: 250px;
+	height: 100px;
+	background: #C7C9BE;
+	color: #DC4E00;
+	text-align: center;
+	-moz-border-radius:    10px;
+  	-webkit-border-radius: 10px;
+	border-radius:         10px;
+}
+
 
 section {
   margin-top: 1em;
@@ -50,10 +97,32 @@ a:visited {
 
 nav {
   float: right;
-  background-color: #C7C9BE;
   padding: 0 0.7em;
   white-space: nowrap;
 }
+
+secondnav {
+	float: right;	
+}
+
+/* Button */
+
+button {
+  float: right;
+  text-align: center;
+  width: auto;
+  color: #fff;
+  background: #C7C9BE;
+  font-size: 100%;
+  margin-bottom: 1em;
+}
+
+.round_create_buttons {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
 
 /* Round corners */
 

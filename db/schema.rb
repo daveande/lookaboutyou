@@ -13,26 +13,6 @@
 
 ActiveRecord::Schema.define(:version => 20111107215245) do
 
-  create_table "bars", :force => true do |t|
-    t.string   "bar_name"
-    t.string   "address"
-    t.string   "zip"
-    t.text     "bar_description"
-    t.integer  "neighborhood_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "caves", :force => true do |t|
-    t.string   "cafe_name"
-    t.string   "address"
-    t.string   "zip"
-    t.text     "cafe_description"
-    t.integer  "neighborhood_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "entries", :force => true do |t|
     t.integer  "guide_id"
     t.integer  "todo_id"
@@ -46,16 +26,6 @@ ActiveRecord::Schema.define(:version => 20111107215245) do
     t.datetime "updated_at"
     t.string   "name"
     t.text     "description"
-  end
-
-  create_table "learns", :force => true do |t|
-    t.string   "learn_name"
-    t.string   "address"
-    t.string   "zip"
-    t.text     "learn_description"
-    t.integer  "neighborhood_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
   end
 
   create_table "neighborhoods", :force => true do |t|
