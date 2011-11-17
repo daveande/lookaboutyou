@@ -19,6 +19,10 @@ class NeighborhoodsController < ApplicationController
   def show
     @neighborhood = Neighborhood.find(params[:id])
 
+    @todo = Todo.new
+    @todo.neighborhood_id = @neighborhood.id
+    
+
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @neighborhood }

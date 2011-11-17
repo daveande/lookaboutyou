@@ -7,3 +7,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery-ui
+
+$(function() {
+    $('#create_todo').click(function(t) { 
+    $('#new_todo').toggle(2000);
+    t.preventDefault();
+    });
+});

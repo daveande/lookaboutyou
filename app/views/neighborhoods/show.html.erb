@@ -29,5 +29,7 @@
 </br>
 <%= link_to "Edit Neighborhood", edit_neighborhood_url(@neighborhood.id) %> |
 <%= link_to "Delete Neighborhood", neighborhood_url(@neighborhood.id), :method => "delete", :confirm => "Are you sure you want to delete this neighborhood?" %>
-<button class="round_create_buttons"><%= link_to "Create a 3, 2, 1 Guide for #{@neighborhood.name}", new_guide_url(:neighborhood_id => @neighborhood.id) %></button>
-<button class="round"><%= link_to "Add Something to do in #{@neighborhood.name}", new_todo_url(:neighborhood_id => @neighborhood.id) %></button>
+<button class="round"><%= link_to "Create a 3, 2, 1 Guide for #{@neighborhood.name}", new_guide_url(:neighborhood_id => @neighborhood.id) %></button>
+<button class="round_create_buttons"><%= link_to "Add Something to do in #{@neighborhood.name}", new_todo_url(:neighborhood_id => @neighborhood.id), :id => "create_todo" %></button>
+
+<%= render "/todos/form" %>

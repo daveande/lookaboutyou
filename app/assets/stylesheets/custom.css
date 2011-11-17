@@ -187,3 +187,7 @@ td.main {
   vertical-align: top;
   padding: 1em;
 }
+
+#new_todo {
+  display:none;
+}

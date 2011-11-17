@@ -10,25 +10,24 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<div class="container">
-		<header class="round">
-			Look About You
-			<nav class="round">
-			  <%= link_to "Neighborhoods", neighborhoods_url, :style => "color:#fff" %> | 
-			  <% if session[:user_id].present? %>
-  			    <%= link_to "My Account", user_url(session[:user_id]), :style => "color:#fff"  %> | <%= link_to "Sign Out", session_url(session[:user_id]), :method => "delete", :style => "color:#fff" %>
-			  <% else%>
-			    <%= link_to "Sign Up!", new_user_url, :style => "color:#fff"  %> | <%= link_to "Sign In", new_session_url, :style => "color:#fff"  %>	
-			  <% end %>
-			</nav>
-		</header>
-		<section class="round">
-		  <% flash.each do |key, value| %>
-		    <div class="flash <%= key %>"><%= value %></div>
-		  <% end %>	
-		  <%= yield %>
-		</section>
-		<%= debug(params) if Rails.env.development? %>
-	</div>
+  <div class="container">
+    <header>Look About You
+      <nav class="round">
+        <%= link_to "Neighborhoods", neighborhoods_url, :style => "color:#fff" %> | 
+          <% if session[:user_id].present? %>
+  	    <%= link_to "My Account", user_url(session[:user_id]), :style => "color:#fff"  %> | <%= link_to "Sign Out", session_url(session[:user_id]), :method => "delete", :style => "color:#fff" %>
+          <% else%>
+	    <%= link_to "Sign Up!", new_user_url, :style => "color:#fff"  %> | <%= link_to "Sign In", new_session_url, :style => "color:#fff"  %>	
+	  <% end %>
+      </nav>
+    </header>
+    <section>
+      <% flash.each do |key, value| %>
+        <div class="flash <%= key %>"><%= value %></div>
+      <% end %>	
+      <%= yield %>
+    </section>
+    <%= debug(params) if Rails.env.development? %>
+</div>
 </body>
 </html>
