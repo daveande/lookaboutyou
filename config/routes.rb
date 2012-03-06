@@ -10,7 +10,9 @@ Lookaboutyou::Application.routes.draw do
 
   resources :users
 
-  resources :neighborhoods
+#  scope "/happy-path" do
+    resources :neighborhoods
+#  end
   
   match "/home" => "pages#home"
   
